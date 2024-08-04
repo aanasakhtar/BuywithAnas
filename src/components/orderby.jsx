@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { PropTypes } from "prop-types";
+import "../styles/orderby.css"
 
 export default function OrderBy({ cb }) {
     const [isExpanded, setIsExpanded] = useState(false);

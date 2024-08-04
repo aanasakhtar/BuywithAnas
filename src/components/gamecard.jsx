@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import res from "./setup";
 import PropTypes  from "prop-types";
-import "../styles/gamecard.css"
+import "../styles/gamecard.css";
 
 export default function GameCard({ str, game, imgs, displayStyle }) {
     const [isAdded, setIsAdded] = useState(res.cartFunctionality.doesContain(game.id));
     
     return (
         <div className={`gamecard ${displayStyle ? "style" : ""}`} key={game.id}>
-            <Link to={str} state={{screenshots : [...imgs],}}>
+            <Link to={str} state={{screenshots : [...imgs], prev: {...location.state}}}>
                 <img src={game.background_image} alt="" />
             </Link>
             <div>
@@ -42,7 +42,7 @@ export default function GameCard({ str, game, imgs, displayStyle }) {
                         })
                     }
                 </div>
-                <Link to={str} state={{screenshots: [...imgs],}}>
+                <Link to={str} state={{screenshots: [...imgs], prev: {...location.state}}}>
                     <span>{game.name}</span>
                 </Link>
             </div>
