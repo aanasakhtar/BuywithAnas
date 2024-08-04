@@ -1,0 +1,150 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.headingback {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.headingback > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: "Poppins";
+    font-weight: 600;
+    min-width: 200px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 400ms ease;
+}
+
+
+.headingback > :nth-child(1):hover {
+    cursor: pointer;
+    color: #ae8213;
+}
+
+.headingback > :nth-child(1) > :nth-child(1) {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 20px;
+    transition: fill 400ms ease;
+}
+
+.headingback > :nth-child(1):hover > :nth-child(1) {
+    fill: #ae8213;
+}
+
+.headingback > :nth-child(2) {
+    font-family: "Changa one", sans-serif;
+    font-size: 4em;
+    text-align: right;
+}
+
+.maingame {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2px;
+    max-height: 100%;
+    height: 100%;
+}
+
+.description, .moredetails {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to right, transparent, #e2e2e2);
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.description > .overlay {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background: linear-gradient(to top, white, white, transparent);
+}
+
+.description div {
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+.description > ::-webkit-scrollbar {
+    display: none;
+}
+
+.maingame .description h1 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-family: "Poppins";
+    font-weight: 800;
+}
+
+.moredetails {
+    color: #6b6b6b;
+    font-size: 1em;
+}
+
+.moredetails a {
+    text-decoration: none;
+    color: #6b6b6b;
+}
+
+.maingame > :nth-child(2) .moredetails > span {
+    display: block;
+}
+
+.maingame > :nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    unicode-bidi: isolate;
+}
+
+.maingame > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.maingame > :nth-child(2) > :nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, transparent, #e2e2e2);
+    position: relative;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.buttontoadd {
+    cursor: pointer;
+}
+
+.alreadyadded {
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.alreadyadded svg {
+    fill: goldenrod;
+    margin-left: 5px;
+}

@@ -1,0 +1,84 @@
+.imageslider {
+    position: relative;
+    border-radius: 30px;
+  
+    max-height: 75vh;
+  
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+  
+.left {
+    left: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+  
+.right {
+    right: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+}
+  
+.left, .right {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+}
+  
+.left > svg, .right > svg {
+    height: 40px;
+    width: auto;
+}
+  
+.mainslider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  
+    /* overflow: hidden; */
+    transition: transform ease-in-out 500ms;
+}
+  
+.mainslider > img {
+    width: 100%;
+    min-width: 100%;
+    aspect-ratio: 1.7 / 1;
+    object-fit: cover;
+    background-position: center;
+  
+}
+  
+.progress {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+  
+.progress > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+  
+.progress > div > div {
+    background-color: white;
+    opacity: 0.7;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+  

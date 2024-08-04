@@ -1,0 +1,28 @@
+.pagetransition {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+.pagetransition > :nth-child(1) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.fadeIn > :nth-child(1) {
+    animation: fi 800ms ease  1  ;
+  }
+
+@keyframes fi {
+    0% {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
