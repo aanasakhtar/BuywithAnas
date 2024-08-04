@@ -45,7 +45,7 @@ const routes = [
 ];
 
 const router = createBrowserRouter(routes, {
-  basename: '/buyWithAnas',
+  basename: '/BuywithAnas',
 });
 
 export default router;
